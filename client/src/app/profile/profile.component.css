@@ -1,0 +1,268 @@
+
+
+
+/* profile PAGE */
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 980px;
+  background-size: cover;
+  height: 100vh;
+}
+
+.background {
+  float: left;
+  width: 100%;
+  height: 60vh;
+  background-image: url("../img/back.jpg");
+  background-size: cover;
+  z-index: 2;
+  position: relative;
+}
+
+.background::after {
+  content: "";
+  width: 100%;
+  height: 60vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.8;
+  transform: translate(-50%, -50%);
+  background: #1e5799;
+  background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #7db9e8 100%);
+  background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#7db9e8 100%);
+  background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#7db9e8 100%);
+}
+
+.button-container {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.button-icon {
+  float: left;
+  width: 50%;
+  height: 70px;
+  position: relative;
+}
+
+.button-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+}
+
+
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.button-icon {
+  float: left;
+  width: 50%;
+  height: 70px;
+  position: relative;
+}
+
+.back-icon {
+  float: left;
+}
+.hamburger-icon {
+  float:right;
+}
+
+.back-icon i,
+.hamburger-icon i{
+  font-size: 24px;
+  color: white;
+  margin: 15px;
+}
+
+.button-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+}
+.profile {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.profile-image {
+  max-width: 130px;
+  height: 130px;
+  border: 2px solid white;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center right;
+  float: left;
+  margin: 0px 40px 0px 40px;
+
+}
+
+.profile-place,
+.profile-name {
+  clear: both;
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+}
+
+.profile-name {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.profile-place {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
+
+.task-container {
+  float: left;
+  width: 100%;
+  height: 40vh;
+  /* background: coral; */
+
+  padding: 20px 20px;
+  overflow: scroll;
+}
+
+
+
+
+
+
+
+
+
+
+
+.section {
+  margin-top: -55px;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  /*note that we're transitioning max-height, not height!*/
+  height: auto;
+  max-height: 600px;
+  /* still have to hard-code a value! */
+  background: black;
+}
+
+.section.collapsed {
+  background: black;
+  max-height: 0;
+}
+
+.add-task {
+  display: block;
+  width: 100%;
+  height: 400px;
+  background: white;
+  position: relative;
+}
+
+.task-input-container {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.add-task input {
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #1e5799;
+  font-size: 14px;
+  text-align: center;
+  color: #1e5799;
+}
+
+.add-task .karma {
+  width: 25%;
+  margin-left: 37.5%;
+}
+
+.add-task p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  color: #1e5799;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.add-task p i {
+  font-size: 40px;
+}
+
+.add-task button {
+  width: 100%;
+  border: 1px solid #1e5799;
+  border-radius: 20px;
+  height: 30px;
+  margin-top: 20px;
+  background: none;
+  color: #1e5799;
+  cursor: pointer;
+}
+
+.add-task button:hover {
+  color: white;
+  background-color: #1e5799;
+}
+
+*:focus {
+  outline: none;
+}

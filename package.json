@@ -1,35 +1,34 @@
 {
-  "name": "codeworks-graphql",
-  "version": "1.0.2",
-  "description": "A Codeworks exercise to train students",
+  "name": "mongodb-graphql-server-template",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "codeworksbcn/graphql"
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js"
   },
-  "author": "Codeworks",
-  "license": "UNLICENSED",
-  "private": true,
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "cz-changelog": "^1.0.1",
-    "del": "^2.2.2",
-    "eslint": "^3.5.0",
-    "eslint-plugin-json": "^1.2.0",
-    "ghooks": "^1.3.2",
-    "gulp": "^3.9.1",
-    "gulp-eslint": "^3.0.1",
-    "gulp-html-lint": "0.0.1",
-    "gulp-load-plugins": "^1.3.0",
-    "gulp-replace": "^0.5.4",
-    "gulp-stylelint": "^3.2.0",
-    "stylelint-config-standard": "^13.0.0"
+    "babel-cli": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.4.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "nodemon": "^1.11.0"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-changelog"
-    },
-    "ghooks": {
-      "pre-commit": "gulp lint"
-    }
+  "dependencies": {
+    "apollo-angular": "^1.1.2",
+    "apollo-angular-link-http": "^1.1.1",
+    "apollo-cache-inmemory": "^1.2.5",
+    "apollo-client": "^2.3.5",
+    "apollo-server-express": "^1.3.6",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "graphql": "^0.10.5",
+    "graphql-tag": "^2.9.2",
+    "graphql-tools": "^1.2.3",
+    "mongoose": "^4.13.14"
   }
 }

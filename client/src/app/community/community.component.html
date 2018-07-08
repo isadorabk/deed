@@ -1,0 +1,180 @@
+<!-- <div class="wrapper clearfix">
+  <div class="background">
+    <div class="navbar clearfix">
+      <div class="hamburger-icon toggle-me">
+        <i class="fas fa-plus"></i>
+      </div>
+      <div class="back-icon">
+        <i class="fas fa-arrow-left"></i>
+      </div>
+    </div>
+    <div class="profile clearfix">
+      <img class="profile-image" src="https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/2763/s200/logo-round-2.png"
+        alt="">
+      <p class="profile-name">Carolina marcantonia</p>
+      <p class="profile-place">Barcelona</p>
+    </div>
+    <div class="button-container clearfix">
+      <div class="button-icon">
+        <i class="far fa-bell"></i>
+      </div>
+      <div class="button-icon toggle-me-trophy">
+        <i class="fas fa-trophy"></i>
+      </div>
+      <div class="button-icon">
+        <i class="fas fa-chart-area"></i>
+      </div>
+    </div>
+  </div>
+  <div class="section collapsible">
+    <div class="add-task">
+      <div class="task-input-container clearfix">
+        <p>
+          <i class="far fa-plus-square"></i>
+        </P>
+        <p>Name</p>
+        <input type="text" name="" value="">
+        <p>Description</p>
+        <input type="text" name="" value="">
+        <p>Karma</p>
+        <input class="karma" type="number" name="" value="">
+        <button type="button" name="button">SUBMIT</button>
+      </div>
+    </div>
+  </div>
+  <div class="section2 collapsible">
+    <div class="trophy">
+      <div class="gifts">
+        <p>K 500</p>
+        <img class="gift" src="https://i2.wp.com/www.solopress.com/blog/wp-content/uploads/2015/02/a-giftcard.png?resize=600%2C377&ssl=1"
+          alt="">
+        <p>K 200</p>
+        <img class="gift" src="https://moosehead.ca/wp-content/uploads/2017/04/estrelladamm-header.png" alt="">
+      </div>
+    </div>
+  </div>
+  <ul class="task-container clearfix">
+    <li class="task clearfix">
+      <div class="task-image">
+        <img src="https://media.wired.com/photos/592743917034dc5f91bee16a/master/w_582,c_limit/robot-clean-dishes-562976337.jpg"
+          alt="">
+      </div>
+      <div class="task-name">
+        <p>CODEWORKS</p>
+      </div>
+      <div class="container-task-icon clearfix">
+        <p>
+          <span class="karma">K</span>25</p>
+        <p>
+          <span class="fas fa-plus plus"></span>
+        </p>
+      </div>
+    </li>
+    <li class="task clearfix">
+      <div class="task-image">
+        <img src="https://media.wired.com/photos/592743917034dc5f91bee16a/master/w_582,c_limit/robot-clean-dishes-562976337.jpg"
+          alt="">
+      </div>
+      <div class="task-name">
+        <p>CODEWORKS</p>
+      </div>
+      <div class="container-task-icon clearfix">
+        <p>
+          <span class="karma">K</span>25</p>
+        <p>
+          <span class="fas fa-plus plus"></span>
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="wrapper clearfix">
+  <div class="background">
+    <div class="navbar clearfix">
+      <div class="hamburger-icon" (click)="showForm()">
+        <i class="fas fa-plus"></i>
+      </div>
+      <div class="back-icon" (click)="goBack()">
+        <i class="fas fa-arrow-left"></i>
+      </div>
+    </div>
+    <div class="profile clearfix">
+      <img class="profile-image" src="{{groupImage}}" alt="">
+      <p class="profile-name">{{group}}</p>
+      <p class="profile-place">Barcelona</p>
+    </div>
+    <div class="button-container clearfix">
+      <div class="button-icon">
+        <i class="far fa-bell"></i>
+      </div>
+<div class="button-icon toggle-me-trophy" (click)="showForm2()">
+        <i class="fas fa-trophy"></i>
+      </div>
+      <div class="button-icon">
+        <i class="fas fa-chart-area"></i>
+      </div>
+    </div>
+  </div>
+
+  <ul class="task-container clearfix">
+
+
+    <div class="section collapsible" [ngClass]="status ? 'show': 'collapsed'">
+      <div class="add-task">
+        <div class="task-input-container clearfix">
+          <p>
+            <i class="far fa-plus-square"></i>
+          </p>
+          <p>Name</p>
+          <input #name type="text" name="" value="">
+          <p>Description</p>
+          <input #content type="text" name="" value="">
+          <p>Karma</p>
+          <input #karma class="karma" type="number" name="" value="">
+          <button type="button" name="button" (click)="submit(name.value, content.value, karma.value)">SUBMIT</button>
+        </div>
+      </div>
+    </div>
+    <div class="section2 collapsible" [ngClass]="status2 ? 'show': 'collapsed'">
+      <div class="trophy">
+        <div class="gifts">
+          <p>K 500</p>
+          <img class="gift" src="https://i2.wp.com/www.solopress.com/blog/wp-content/uploads/2015/02/a-giftcard.png?resize=600%2C377&ssl=1"
+            alt="">
+          <p>K 100</p>
+          <img class="gift" src="https://moosehead.ca/wp-content/uploads/2017/04/estrelladamm-header.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <app-task *ngFor="let task of tasks" [task]='task'></app-task>
+
+  </ul>
+</div>

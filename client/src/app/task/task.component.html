@@ -1,0 +1,18 @@
+<li class="task clearfix " [ngClass]="status ? 'hidden': 'open'">
+    <div class="task-image">
+      <img src="{{task.image}}" alt="">
+    </div>
+    <div class="task-name">
+      <p >{{task.title}}</p>
+    </div>
+    <div class="container-task-icon clearfix">
+      <p> <span class="karma">K</span>{{points}}</p>
+      <p> <span class="fas fa-plus plus" (click)="addPoints()"></span></p>
+    </div>
+
+    <div>
+      <p class="content">{{task.content}}</p>
+    <button class="completed" (click)="showContent()">Completed!</button>
+    </div>
+    
+  </li>

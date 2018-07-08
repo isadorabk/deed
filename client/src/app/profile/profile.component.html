@@ -1,0 +1,46 @@
+    <div class="wrapper clearfix">
+      <div class="background">
+        <div class="navbar clearfix">
+<div class="hamburger-icon" (click)="showForm()">
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="back-icon">
+            <i class="fas fa-arrow-left" (click)="goBack()"></i>
+          </div>
+        </div>
+        <div class="profile clearfix">
+          <img class="profile-image" src="{{user?.image}}" alt="">
+          <p class="profile-name">{{user?.firstName}} {{user?.lastName}}</p>
+          <p class="profile-place">{{user?.city}}</p>
+        </div>
+        <div class="button-container clearfix">
+          <div class="button-icon">
+            <i class="far fa-bell"></i>
+          </div>
+          <div class="button-icon">
+            <i class="fas fa-chart-area"></i>
+          </div>
+        </div>
+      </div>
+      <ul class="task-container clearfix">
+
+
+<div class="section collapsible" [ngClass]="status ? 'show': 'collapsed'">
+  <div class="add-task">
+    <div class="task-input-container clearfix">
+      <p>
+        <i class="far fa-plus-square"></i>
+      </p>
+      <p>Group Name</p>
+      <input #name type="text" name="" value="">
+      <p>Type</p>
+      <input #type type="text" name="" value="">
+      <p>Karma</p>
+      <input #karma class="karma" type="number" name="" value="">
+      <button type="button" name="button" (click)="submit()">SUBMIT</button>
+    </div>
+  </div>
+</div>
+  <app-mini-community *ngFor="let karma of user?.karmas" [karmas]='karma'></app-mini-community>
+  </ul> 
+</div>

@@ -1,0 +1,383 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200i,300,400,500,600,700');
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 980px;
+  background-size: cover;
+  height: 100vh;
+}
+
+.background {
+  float: left;
+  width: 100%;
+  height: 60vh;
+  background-image: url("../img/back.jpg");
+  background-size: cover;
+  z-index: 2;
+  position: relative;
+}
+
+.background::after {
+  content: "";
+  width: 100%;
+  height: 60vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.8;
+  transform: translate(-50%, -50%);
+  background: rgba(248, 148, 6, 1);
+  background: -moz-linear-gradient(top, rgba(248, 148, 6, 1) 0%, rgba(248, 148, 6, 0.97) 4%, rgba(255, 175, 75, 0.69) 41%, rgba(255, 175, 75, 0.24) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(248, 148, 6, 1)), color-stop(4%, rgba(248, 148, 6, 0.97)), color-stop(41%, rgba(255, 175, 75, 0.69)), color-stop(100%, rgba(255, 175, 75, 0.24)));
+  background: -webkit-linear-gradient(top, rgba(248, 148, 6, 1) 0%, rgba(248, 148, 6, 0.97) 4%, rgba(255, 175, 75, 0.69) 41%, rgba(255, 175, 75, 0.24) 100%);
+  background: -o-linear-gradient(top, rgba(248, 148, 6, 1) 0%, rgba(248, 148, 6, 0.97) 4%, rgba(255, 175, 75, 0.69) 41%, rgba(255, 175, 75, 0.24) 100%);
+  background: -ms-linear-gradient(top, rgba(248, 148, 6, 1) 0%, rgba(248, 148, 6, 0.97) 4%, rgba(255, 175, 75, 0.69) 41%, rgba(255, 175, 75, 0.24) 100%);
+  background: linear-gradient(to bottom, rgba(248, 148, 6, 1) 0%, rgba(248, 148, 6, 0.97) 4%, rgba(255, 175, 75, 0.69) 41%, rgba(255, 175, 75, 0.24) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f89406', endColorstr='#ffaf4b', GradientType=0);
+}
+
+.button-container {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.button-icon {
+  float: left;
+  width: 50%;
+  height: 70px;
+  position: relative;
+}
+
+.button-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+}
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.button-icon {
+  float: left;
+  width: 33%;
+  height: 70px;
+  position: relative;
+}
+
+.back-icon {
+  float: left;
+}
+
+.hamburger-icon {
+  float: right;
+  cursor: pointer;
+}
+
+.back-icon i,
+.hamburger-icon i {
+  font-size: 24px;
+  color: white;
+  margin: 15px;
+}
+
+.button-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+}
+
+.back-icon i:hover,
+.hamburger-icon i:hover {
+  color: rgba(248, 148, 6, 1);
+}
+
+.profile {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.profile-image {
+  max-width: 130px;
+  height: 130px;
+  border: 2px solid white;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center right;
+  float: left;
+  margin: 0px 40px 0px 40px;
+}
+
+.profile-place,
+.profile-name {
+  clear: both;
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+}
+
+.profile-name {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.profile-place {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
+
+.task-container {
+  float: left;
+  width: 100%;
+  height: 40vh;
+  /* background: coral; */
+  padding: 20px 20px;
+  overflow: scroll;
+}
+
+.task {
+  float: left;
+  height: 100px;
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  background: white;
+  margin-bottom: 5px;
+}
+
+.task-image {
+  width: 25%;
+  height: 100px;
+  float: left;
+  position: relative;
+}
+
+.task-image img {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center right;
+}
+
+.task-name {
+  float: left;
+  width: 50%;
+  height: 100px;
+  position: relative;
+}
+
+.task-name p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.container-task-icon {
+  float: left;
+  width: 25%;
+  height: 100px;
+}
+
+.container-task-icon p {
+  width: 100%;
+  float: left;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(248, 148, 6, 1);
+  padding-top: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container-task-icon .karma {
+  font-weight: 400;
+  font-size: 25px;
+  padding-right: 10px;
+}
+
+.container-task-icon .plus {
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.section2,
+.section {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    height: auto;
+    max-height: 600px;
+}
+
+.section2.collapsed,
+.section.collapsed {
+
+  max-height:0px;
+}
+
+.add-task {
+  display: block;
+  width: 100%;
+  height: 400px;
+  background: white;
+  position: relative;
+}
+
+.task-input-container {
+  width: 25%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.add-task input {
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid rgba(248, 148, 6, 1);
+  font-size: 14px;
+  text-align: center;
+  color: rgba(248, 148, 6, 1);
+}
+
+.add-task .karma {
+  width: 25%;
+  margin-left: 37.5%;
+}
+
+.add-task p {
+  font-family: Montserrat, sans-serif;
+  font-weight: 200;
+  color: rgba(248, 148, 6, 1);
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.add-task p i {
+  font-size: 40px;
+}
+
+.add-task button {
+  width: 100%;
+  border: 1px solid rgba(248, 148, 6, 1);
+  border-radius: 20px;
+  height: 30px;
+  margin-top: 20px;
+  background-color: white;
+  color: rgba(248, 148, 6, 1);
+  cursor: pointer;
+}
+
+.add-task button:hover {
+  color: white;
+  background-color: rgba(248, 148, 6, 1);
+}
+
+.trophy {
+  width: 100%;
+  height: 400px;
+  background: white;
+  position: relative;
+}
+
+.gifts {
+  width: 350px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.gifts p {
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  color: rgba(248, 148, 6, 1);
+  padding: 20px 0px 20px 0px;
+}
+
+.gift {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  object-position: center right;
+  /* background: black; */
+  z-index: 0;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+*:focus {
+  outline: none;
+}
+
+
+
+
+
+
+
+

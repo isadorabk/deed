@@ -1,0 +1,64 @@
+.task {
+  float: left;
+  height: 100px;
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  background: white;
+  margin-bottom: 5px;
+}
+
+.task-image {
+  width: 25%;
+  height: 100px;
+  float: left;
+  position: relative;
+}
+.task-image img {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: center right;
+}
+
+.task-name {
+  float: left;
+  width: 50%;
+  height: 100px;
+  position: relative;
+}
+
+.task-name p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight:200;
+}
+
+.container-task-icon {
+  float: left;
+  width: 25%;
+  height: 100px;
+}
+
+.container-task-icon p {
+  width: 100%;
+  float: left;
+  font-size: 14px;
+  text-align: center;
+  color: #2989d8;
+	padding-top: 15px;
+	font-family: 'Montserrat', sans-serif;
+}
+.container-task-icon span {
+	font-weight: 400;
+	font-size: 25px;
+	padding-right: 10px;
+}
